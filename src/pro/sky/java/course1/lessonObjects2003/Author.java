@@ -2,15 +2,15 @@ package pro.sky.java.course1.lessonObjects2003;
 
 public class Author {
 
-    private String authorsName;
+    private String name;
 
-    public Author (String authorsName){
-        this.authorsName = authorsName;
+    public Author (String name){
+      this.name = name;
     }
 
 
-    public String getAuthorsName(){
-        return this.authorsName;
+    public String getName(){
+        return this.name;
 
     }
 }
