@@ -13,4 +13,20 @@ public class Author {
         return this.name;
 
     }
+
+    public String toString() {
+        return getName();
+    }
+
+    public int hashCode(){
+        return java.util.Objects.hash(this.name);
+    }
+    public boolean equals(Author other) {
+        if (this.name.equals(other.name)) {
+            return true;
+        }
+        return false;
+    }
+
+
 }

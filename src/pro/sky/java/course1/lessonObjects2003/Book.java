@@ -2,7 +2,7 @@ package pro.sky.java.course1.lessonObjects2003;
 
 public class Book {
 
-    public Author author;
+    private Author author;
 
     private String book;
 
@@ -20,17 +20,39 @@ public class Book {
         return this.book;
     }
 
-    public int getPublicationYear(){
-        return this.publicationYear;
-    }
-
-
     public Author getAuthor(){
         return this.author;
+    }
+
+    public int getPublicationYear(){
+        return this.publicationYear;
     }
 
     public void setPublicationYear(int publicationYear) {
         this.publicationYear = publicationYear;
     }
 
+    //task
+    public String toString() {
+        return getBook() + getPublicationYear()+ getAuthor();
     }
+
+    public int hashCode() {
+        return java.util.Objects.hash(this.book,this.author,this.publicationYear);
+    }
+
+
+    public boolean equals(Book other){
+        if (this.book.equals(other.book) && this.author.equals(other.author) && this.publicationYear==other.publicationYear) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+
+
+
+}
+
+
