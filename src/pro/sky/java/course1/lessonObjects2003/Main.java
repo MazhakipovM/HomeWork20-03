@@ -11,12 +11,24 @@ public class Main {
 
         Author SecondAuthor = new Author(" Автор второй книги. ");
         Book SecondBook = new Book("Вторая книга. ",SecondAuthor, 2022);
-
-
         System.out.println(SecondBook.getBook() + SecondBook.getPublicationYear() + SecondAuthor.getName());
+
+        Author ThirdAuthor = new Author(" Автор первой книги. ");
+        Book ThirdBook = new Book("Первая книга. ",ThirdAuthor, 1995);
+
+
 
         FirstBook.setPublicationYear(1995);
         System.out.println(FirstBook.getBook() + FirstBook.getPublicationYear() + FirstAuthor.getName());
+
+
+        System.out.println(FirstBook);// toString
+
+
+        System.out.println(FirstAuthor.equals(SecondAuthor));
+
+        System.out.println(FirstBook.equals(ThirdBook));
+
 
 
 
